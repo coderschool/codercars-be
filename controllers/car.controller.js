@@ -203,7 +203,7 @@ carController.createCar = async (req, res, next) => {
       price,
     };
 
-    const createdCar = await Car.create(requestBody, { options: {} });
+    const createdCar = await Car.create(requestBody);
 
     // create response data object
     const responseData = {
