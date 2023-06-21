@@ -36,8 +36,6 @@ carController.getCars = async (req, res, next) => {
     let page = parseInt(req.query.page) || 1;
     let limit = parseInt(req.query.limit) || 10;
 
-    // let offset = limit * (page - 1);
-
     const listOfFound = await Car.find({ isDeleted: false })
       .sort({ createdAt: -1 })
       .limit(limit)
